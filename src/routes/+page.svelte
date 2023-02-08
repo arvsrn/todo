@@ -54,8 +54,8 @@
 </script>
 
 <main>
-    <div style="display:flex;flex-direction:column;align-items:flex-start;padding:0px;position:absolute;width:600px;height:fit-content;">
-        <div style="display:flex;flex-direction:row;align-items:center;padding:0px;gap:10px;width:600px;height:32px; margin-bottom: 40px;">
+    <div class="container-mq">
+        <div style="display:flex;flex-direction:row;align-items:center;padding:0px;gap:10px;width:100%;height:32px; margin-bottom: 40px;">
             <img src="https://pbs.twimg.com/profile_images/1557306330930589697/BeTkzf59_400x400.jpg" alt="" draggable="false">
             <Search></Search>
             <button class="primary">New list</button>
@@ -116,6 +116,23 @@
 </main>
 
 <style>
+    div.container-mq {
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:0px;
+        position:absolute;
+        width:600px;
+        height:fit-content;
+    }
+
+    @media only screen and (max-width: 640px) {
+        div.container-mq {
+            width:93.75vw;
+            min-width: 265px;
+        }
+    }
+
     main {
         display: flex;
         flex-direction: column;
